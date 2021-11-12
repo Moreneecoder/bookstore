@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { createBook, removeBook } from '../actions';
 
 const BooksList = (props) => {
   const { books } = props;
@@ -42,14 +41,5 @@ BooksList.propTypes = {
 
 const mapStateToProps = (state) => (state);
 
-const mapDispatchToProps = (dispatch) => ({
-  submitNewBook: (book) => {
-    dispatch(createBook(book));
-  },
-  removeExistingBook: (book) => {
-    dispatch(removeBook(book));
-  },
-});
-
-const BooksListContainer = connect(mapStateToProps, mapDispatchToProps)(BooksList);
+const BooksListContainer = connect(mapStateToProps, null)(BooksList);
 export default BooksListContainer;

@@ -1,14 +1,21 @@
 import { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createBook, removeBook } from '../actions';
 
-const BooksForm = () => {
+const BooksForm = (props) => {
+//   console.log(props);
+  const { submitNewBook } = props;
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   let idx = 0;
 
   const [book, setBook] = useState({
-    id: Math.floor(Math.random() * 10) + 1,
+    id: '',
     title: '',
-    category: 'Something',
+    category: '',
   });
+
+  const [uniqId, setUniqId] = useState(1);
 
   const handleChange = (data, actionType) => {
     if (actionType === 'changeTitle') {
@@ -24,14 +31,25 @@ const BooksForm = () => {
     }
   };
 
-  const handleSubmit = (formData) => {
-    console.log(formData);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setUniqId(uniqId + 1);
+    submitNewBook({
+      ...book,
+      id: uniqId,
+    });
+    setBook({
+      id: '',
+      title: '',
+      category: '',
+    });
   };
 
   return (
     <div className="BooksForm">
-      <form>
-        <input value={book.title} onChange={(e) => handleChange(e.target.value, 'changeTitle')} />
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input required value={book.title} onChange={(e) => handleChange(e.target.value, 'changeTitle')} />
         <p>
           Title:
           {book.title}
@@ -42,16 +60,30 @@ const BooksForm = () => {
           {book.category}
         </p>
 
-        <select onChange={(e) => handleChange(e.target.value, 'changeCategory')} name="categories">
+        <select required onChange={(e) => handleChange(e.target.value, 'changeCategory')} name="categories">
           {categories.map((item) => {
             idx += 1;
             return (<option value={item} key={idx}>{item}</option>);
           })}
         </select>
-        <button type="submit" onSubmit={(e) => handleSubmit(e)}>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
 };
 
-export default BooksForm;
+BooksForm.propTypes = {
+  submitNewBook: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  submitNewBook: (book) => {
+    dispatch(createBook(book));
+  },
+  removeExistingBook: (book) => {
+    dispatch(removeBook(book));
+  },
+});
+
+const BooksFormContainer = connect(null, mapDispatchToProps)(BooksForm);
+export default BooksFormContainer;
