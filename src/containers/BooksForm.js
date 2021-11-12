@@ -50,15 +50,6 @@ const BooksForm = (props) => {
     <div className="BooksForm">
       <form onSubmit={(e) => handleSubmit(e)}>
         <input required value={book.title} onChange={(e) => handleChange(e.target.value, 'changeTitle')} />
-        <p>
-          Title:
-          {book.title}
-        </p>
-
-        <p>
-          Category:
-          {book.category}
-        </p>
 
         <select required onChange={(e) => handleChange(e.target.value, 'changeCategory')} name="categories">
           {categories.map((item) => {

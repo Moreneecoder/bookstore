@@ -1,15 +1,4 @@
-const initialState = [
-  {
-    id: Math.floor(Math.random() * 10) + 1,
-    title: 'Harry Porter series',
-    category: 'Fantasy',
-  },
-  {
-    id: Math.floor(Math.random() * 10) + 1,
-    title: 'The New Man',
-    category: 'Fiction',
-  },
-];
+const initialState = [];
 
 const booksReducer = (state = initialState, action) => {
   let output;
