@@ -2,44 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import rootReducer from './reducers';
 import './stylesheets/index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-const initialState = [
-  {
-    id: 1,
-    title: 'Harry Porter series',
-    category: 'Fantasy',
-  },
-  {
-    id: 2,
-    title: 'The New Man',
-    category: 'Fiction',
-  },
-];
-
-const CREATE_BOOK = 'CREATE_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
-
-const booksReducer = (state = initialState, action) => {
-  let output;
-  switch (action.type) {
-    case CREATE_BOOK:
-      output = 'CREATED';
-      break;
-    case REMOVE_BOOK:
-      output = 'CREATED';
-      break;
-    default:
-      output = state;
-  }
-
-  console.log(output);
-  return output;
-};
-
-const store = createStore(booksReducer);
+const store = createStore(rootReducer);
+// console.log(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>
