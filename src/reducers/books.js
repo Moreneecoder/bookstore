@@ -24,7 +24,6 @@ const booksReducer = (state = initialState, action) => {
       output = state;
   }
 
-  console.log(output);
   return output;
 };
 

@@ -5,8 +5,6 @@ import Book from '../components/Book';
 const BooksList = (props) => {
   const { books } = props;
 
-  console.log(props);
-
   return (
     <div className="BooksList">
       <table>
