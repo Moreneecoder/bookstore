@@ -1,11 +1,11 @@
 const initialState = [
   {
-    id: 1,
+    id: Math.random().toFixed(2),
     title: 'Harry Porter series',
     category: 'Fantasy',
   },
   {
-    id: 2,
+    id: Math.random().toFixed(2),
     title: 'The New Man',
     category: 'Fiction',
   },
