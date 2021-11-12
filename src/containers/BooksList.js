@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { createBook, removeBook } from '../actions';
 
 const BooksList = (props) => {
   const { books } = props;
@@ -42,13 +43,11 @@ BooksList.propTypes = {
 const mapStateToProps = (state) => (state);
 
 const mapDispatchToProps = (dispatch) => ({
-  submitNewBook: () => {
-    // dispatch(addBook(book));
-    dispatch({
-      id: '1',
-      title: 'Harry Porter series',
-      category: 'Fantasy',
-    });
+  submitNewBook: (book) => {
+    dispatch(createBook(book));
+  },
+  removeExistingBook: (book) => {
+    dispatch(removeBook(book));
   },
 });
 
