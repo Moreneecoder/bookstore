@@ -8,12 +8,12 @@ import reportWebVitals from './reportWebVitals';
 
 const initialState = [
   {
-    id: '1',
+    id: 1,
     title: 'Harry Porter series',
     category: 'Fantasy',
   },
   {
-    id: '2',
+    id: 2,
     title: 'The New Man',
     category: 'Fiction',
   },

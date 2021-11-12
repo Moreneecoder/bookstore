@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Book from '../components/Book';
 
 const BooksList = (props) => {
   const { books } = props;
-  //   console.log(books);
+
   return (
     <div className="BooksList">
       <table>
@@ -16,11 +17,10 @@ const BooksList = (props) => {
         </thead>
 
         <tbody>
-          <tr>
-            <td>{books[0].id}</td>
-            <td>{books[0].title}</td>
-            <td>{books[0].category}</td>
-          </tr>
+          {books.map((item) => {
+            const { id } = item;
+            return (<Book key={id} book={item} />);
+          })}
         </tbody>
       </table>
     </div>
@@ -33,7 +33,7 @@ BooksList.defaultProps = {
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   })),
