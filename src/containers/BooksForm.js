@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { createBook, removeBook } from '../actions';
+import { createBook } from '../actions';
 
 const BooksForm = (props) => {
-//   console.log(props);
   const { submitNewBook } = props;
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   let idx = 0;
@@ -70,9 +69,6 @@ BooksForm.propTypes = {
 const mapDispatchToProps = (dispatch) => ({
   submitNewBook: (book) => {
     dispatch(createBook(book));
-  },
-  removeExistingBook: (book) => {
-    dispatch(removeBook(book));
   },
 });
 
