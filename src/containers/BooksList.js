@@ -39,7 +39,6 @@ BooksList.propTypes = {
   })),
 };
 
-// export default BooksList;
 const mapStateToProps = (state) => ({ books: state });
 
 const mapDispatchToProps = (dispatch) => ({
