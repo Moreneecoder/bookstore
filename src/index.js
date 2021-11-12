@@ -8,7 +8,6 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
 const store = createStore(rootReducer);
-// console.log(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>
