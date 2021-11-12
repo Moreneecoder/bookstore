@@ -1,4 +1,4 @@
-import BooksListContainer from './BooksList';
+import BooksListContainer from '../containers/BooksList';
 
 const App = () => (
   <div className="App">

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const BooksList = (props) => {
   const { books } = props;
-  console.log(books);
+  //   console.log(books);
   return (
     <div className="BooksList">
       <table>
@@ -17,9 +17,9 @@ const BooksList = (props) => {
 
         <tbody>
           <tr>
-            <td>id</td>
-            <td>Title</td>
-            <td>Category</td>
+            <td>{books[0].id}</td>
+            <td>{books[0].title}</td>
+            <td>{books[0].category}</td>
           </tr>
         </tbody>
       </table>
