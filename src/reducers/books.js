@@ -2,6 +2,7 @@ const initialState = [];
 
 const booksReducer = (state = initialState, action) => {
   let output;
+
   switch (action.type) {
     case 'CREATE_BOOK':
       output = [
