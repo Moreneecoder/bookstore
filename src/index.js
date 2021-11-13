@@ -8,6 +8,7 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
 const store = createStore(rootReducer);
+console.log(store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
