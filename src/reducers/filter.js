@@ -1,6 +1,6 @@
 const filterReducer = (state = 'ALL', action) => {
   let output;
-  console.log(action);
+
   switch (action.type) {
     case 'CHANGE_FILTER':
       output = action.filter;
@@ -8,7 +8,6 @@ const filterReducer = (state = 'ALL', action) => {
     default:
       output = state;
   }
-  console.log(output);
   return output;
 };
 
