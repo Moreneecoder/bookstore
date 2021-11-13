@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { createBook, removeBook } from '../actions';
+import { removeBook } from '../actions';
 
 const BooksList = (props) => {
-  const { books } = props;
+  const { books, removeExistingBook } = props;
 
   return (
     <div className="BooksList">
@@ -20,7 +20,7 @@ const BooksList = (props) => {
         <tbody>
           {books.map((item) => {
             const { id } = item;
-            return (<Book key={id} book={item} />);
+            return (<Book key={id} book={item} handleClick={removeExistingBook} />);
           })}
         </tbody>
       </table>
@@ -38,14 +38,12 @@ BooksList.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   })),
+  removeExistingBook: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => (state);
 
 const mapDispatchToProps = (dispatch) => ({
-  submitNewBook: (book) => {
-    dispatch(createBook(book));
-  },
   removeExistingBook: (book) => {
     dispatch(removeBook(book));
   },
