@@ -59,7 +59,7 @@ const BooksForm = (props) => {
             return (<option value={item} key={idx}>{item}</option>);
           })}
         </select>
-        <button className="main-bg-color" type="submit">Submit</button>
+        <button className="main-bg-color" type="submit">ADD BOOK</button>
       </form>
     </div>
   );
