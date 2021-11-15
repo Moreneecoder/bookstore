@@ -24,3 +24,7 @@ body {
 .roboto-font {
   font-family: 'Roboto Slab', serif;
 }
+
+.flex-box {
+  display: flex;
+}

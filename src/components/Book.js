@@ -5,7 +5,7 @@ const Book = (props) => {
   const { book, handleClick } = props;
 
   return (
-    <div className="Book">
+    <div className="Book flex-box">
       <div className="book-details">
         <p className="category grey">{book.category}</p>
         <h3 className="title roboto-font">{book.title}</h3>
@@ -25,7 +25,7 @@ const Book = (props) => {
         </p>
       </div>
 
-      <div className="progess-details">
+      <div className="progess-details flex-box">
         <div className="progress-bar" />
         <div style={{ marginLeft: '10px' }}>
           <h1 style={{ margin: '0' }}>8%</h1>

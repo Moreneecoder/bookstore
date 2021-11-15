@@ -1,5 +1,4 @@
 .Book {
-  display: flex;
   justify-content: space-between;
   background-color: white;
   padding: 20px 30px;
@@ -49,7 +48,6 @@
 
 .progess-details {
   flex: 15%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: center;
