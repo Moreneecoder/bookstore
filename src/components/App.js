@@ -1,6 +1,6 @@
 import '../stylesheets/App.css';
 import NavBar from './NavBar';
-import Booky from './BookTest';
+// import Booky from './BookTest';
 import BooksListContainer from '../containers/BooksList';
 import BooksFormContainer from '../containers/BooksForm';
 
@@ -8,7 +8,7 @@ const App = () => (
   <div className="App">
     <NavBar />
     <div className="AppItem">
-      <Booky />
+      {/* <Booky /> */}
       <BooksListContainer />
       <BooksFormContainer />
     </div>

@@ -19,22 +19,10 @@ const BooksList = (props) => {
     <div className="BooksList">
       <CategoryFilter handleChange={handleFilterChange} />
 
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {filteredBooks().map((item) => {
-            const { id } = item;
-            return (<Book key={id} book={item} handleClick={removeExistingBook} />);
-          })}
-        </tbody>
-      </table>
+      {filteredBooks().map((item) => {
+        const { id } = item;
+        return (<Book key={id} book={item} handleClick={removeExistingBook} />);
+      })}
     </div>
   );
 };
