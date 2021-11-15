@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   background-color: white;
-  padding: 30px;
+  padding: 10px 30px;
   border-radius: 5px;
 }
 
@@ -21,4 +21,15 @@
 .category {
   margin: 5px;
   font-weight: bolder;
+}
+
+.page-details p {
+  margin: 0;
+}
+
+.update-btn {
+  border: none;
+  padding: 15px;
+  margin-top: 15px;
+  color: white;
 }

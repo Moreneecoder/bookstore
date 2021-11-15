@@ -15,7 +15,12 @@ const Booky = () => (
     </div>
 
     <div>yolo</div>
-    <div>oyo</div>
+
+    <div className="page-details">
+      <small className="grey">CURRENT CHAPTER</small>
+      <p>Chapter 17</p>
+      <button className="update-btn main-bg-color" type="button">UPDATE PROGRESS</button>
+    </div>
   </div>
 );
 
