@@ -39,13 +39,6 @@ const Book = (props) => {
         <button className="update-btn main-bg-color" type="button">UPDATE PROGRESS</button>
       </div>
     </div>
-
-  // <tr className="Book">
-  //   <td>{book.id}</td>
-  //   <td>{book.title}</td>
-  //   <td>{book.category}</td>
-  //   <td><button type="button" onClick={() => handleClick(book)}>Remove</button></td>
-  // </tr>
   );
 };
 
