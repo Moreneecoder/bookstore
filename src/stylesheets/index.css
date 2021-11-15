@@ -15,3 +15,7 @@ body {
 .secondary-text-color {
   color: #2d2828;
 }
+
+.grey {
+  color: darkgray;
+}

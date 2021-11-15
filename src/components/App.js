@@ -1,13 +1,17 @@
-// import '../stylesheets/App.css';
+import '../stylesheets/App.css';
 import NavBar from './NavBar';
+import Booky from './BookTest';
 import BooksListContainer from '../containers/BooksList';
 import BooksFormContainer from '../containers/BooksForm';
 
 const App = () => (
   <div className="App">
     <NavBar />
-    <BooksListContainer />
-    <BooksFormContainer />
+    <div className="AppItem">
+      <Booky />
+      <BooksListContainer />
+      <BooksFormContainer />
+    </div>
   </div>
 );
 
