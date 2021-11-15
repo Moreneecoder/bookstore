@@ -1,4 +1,15 @@
-const initialState = [];
+const initialState = [
+  {
+    id: 1,
+    title: 'The New Man',
+    category: 'History',
+  },
+  {
+    id: 2,
+    title: 'Human Error',
+    category: 'Action',
+  },
+];
 
 const booksReducer = (state = initialState, action) => {
   let output;

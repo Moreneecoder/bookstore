@@ -15,7 +15,7 @@ const BooksForm = (props) => {
     category: '',
   });
 
-  const [uniqId, setUniqId] = useState(1);
+  const [uniqId, setUniqId] = useState(3);
 
   const handleChange = (data, actionType) => {
     if (actionType === 'changeTitle') {
