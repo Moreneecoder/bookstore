@@ -1,13 +1,17 @@
-const NavBar = () => (
-  <div className="Navbar">
-    <div>
-      <h1>BookVault</h1>
+import '../stylesheets/NavBar.css';
 
-      <p>BOOKS</p>
-      <p>CATEGORIES</p>
+const NavBar = () => (
+  <div className="NavBar">
+    <div className="menu">
+      <h1 className="menu-item">BookVault</h1>
+
+      <p className="menu-item">BOOKS</p>
+      <p className="menu-item">CATEGORIES</p>
     </div>
 
-    <div className="user-avatar">MA</div>
+    <div className="user-avatar">
+      <p>MA</p>
+    </div>
   </div>
 );
 
