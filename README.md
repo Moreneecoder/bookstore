@@ -3,11 +3,14 @@
 > A Digital Book store built with React and Redux
 
 ## Built With
+* Javscript (ES6)
 * React
 * Redux
-* npm
-* CSS
-* Javscript (ES6)
+* NPM
+* CSS3
+
+## Webpage View
+![](https://user-images.githubusercontent.com/38987207/141831581-c1781cee-9c57-418c-95a0-b048d50c9ffe.png)
 
 ## Live Demo
 * [BookStore](https://keji-bookstore.herokuapp.com/)

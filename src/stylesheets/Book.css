@@ -1,0 +1,75 @@
+.Book {
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin: 10px 0 10px 0;
+  border: 1px solid #e8e8e8;
+}
+
+.book-actions span {
+  margin-right: 5%;
+  padding-right: 5%;
+  border-right: 1px solid lightgray;
+}
+
+.book-details {
+  flex: 40%;
+}
+
+.title,
+.category,
+.author {
+  margin: 0;
+}
+
+.category {
+  margin: 5px;
+  font-weight: bolder;
+}
+
+.page-details {
+  flex: 30%;
+  padding-left: 5%;
+}
+
+.page-details p {
+  margin: 0;
+}
+
+.progress-bar {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: solid 5px #e8e8e8;
+  border-radius: 50%;
+  border-top-color: #4386bf;
+  border-right-color: #4386bf;
+}
+
+.progess-details {
+  flex: 15%;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  padding-right: 10%;
+  height: 55px;
+  position: relative;
+}
+
+.progess-details::before {
+  content: '';
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  background-color: darkgrey;
+}
+
+.update-btn {
+  border: none;
+  padding: 15px;
+  margin-top: 15px;
+  color: white;
+  border-radius: 5px;
+}

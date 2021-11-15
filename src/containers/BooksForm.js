@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions';
+import '../stylesheets/BooksForm.css';
 
 const BooksForm = (props) => {
   const { submitNewBook } = props;
@@ -14,7 +15,7 @@ const BooksForm = (props) => {
     category: '',
   });
 
-  const [uniqId, setUniqId] = useState(1);
+  const [uniqId, setUniqId] = useState(3);
 
   const handleChange = (data, actionType) => {
     if (actionType === 'changeTitle') {
@@ -47,16 +48,18 @@ const BooksForm = (props) => {
 
   return (
     <div className="BooksForm">
+      <h3 className="grey">ADD NEW BOOK</h3>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input required value={book.title} onChange={(e) => handleChange(e.target.value, 'changeTitle')} />
+        <input required value={book.title} onChange={(e) => handleChange(e.target.value, 'changeTitle')} placeholder="Book Title" />
 
-        <select required onChange={(e) => handleChange(e.target.value, 'changeCategory')} name="categories">
+        <select className="grey" required onChange={(e) => handleChange(e.target.value, 'changeCategory')} name="categories">
+          <option value="">Category</option>
           {categories.map((item) => {
             idx += 1;
             return (<option value={item} key={idx}>{item}</option>);
           })}
         </select>
-        <button type="submit">Submit</button>
+        <button className="main-bg-color roboto-font" type="submit">ADD BOOK</button>
       </form>
     </div>
   );
