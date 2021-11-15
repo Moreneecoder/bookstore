@@ -2,7 +2,7 @@ import '../stylesheets/Booky.css';
 
 const Booky = () => (
   <div className="Booky">
-    <div>
+    <div className="book-details">
       <p className="category grey">Action</p>
       <h3 className="title">The Hunger Games</h3>
       <p className="author main-text-color">Suzanne Collins</p>
@@ -14,7 +14,13 @@ const Booky = () => (
       </p>
     </div>
 
-    <div>yolo</div>
+    <div className="progess-details">
+      <div className="progress-bar" />
+      <div style={{ marginLeft: '10px' }}>
+        <h1 style={{ margin: '0' }}>8%</h1>
+        <p style={{ margin: '0' }}>COMPLETED</p>
+      </div>
+    </div>
 
     <div className="page-details">
       <small className="grey">CURRENT CHAPTER</small>

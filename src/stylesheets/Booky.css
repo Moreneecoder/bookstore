@@ -7,9 +7,13 @@
 }
 
 .book-actions span {
-  margin-right: 10%;
-  padding-right: 10%;
+  margin-right: 5%;
+  padding-right: 5%;
   border-right: 1px solid lightgray;
+}
+
+.book-details {
+  flex: 40%;
 }
 
 .title,
@@ -23,8 +27,31 @@
   font-weight: bolder;
 }
 
+.page-details {
+  flex: 30%;
+  border-left: 1px solid grey;
+  padding-left: 5%;
+}
+
 .page-details p {
   margin: 0;
+}
+
+.progress-bar {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: solid 5px #e8e8e8;
+  border-radius: 50%;
+  border-top-color: #4386bf;
+  border-right-color: #4386bf;
+}
+
+.progess-details {
+  flex: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10%;
 }
 
 .update-btn {
