@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../stylesheets/Booky.css';
+import '../stylesheets/Book.css';
 
 const Book = (props) => {
   const { book, handleClick } = props;
