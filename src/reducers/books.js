@@ -9,6 +9,11 @@ const initialState = [
     title: 'Human Error',
     category: 'Action',
   },
+  {
+    id: 3,
+    title: 'Aztec Blood',
+    category: 'History',
+  },
 ];
 
 const booksReducer = (state = initialState, action) => {

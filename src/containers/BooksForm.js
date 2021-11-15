@@ -52,14 +52,14 @@ const BooksForm = (props) => {
       <form onSubmit={(e) => handleSubmit(e)}>
         <input required value={book.title} onChange={(e) => handleChange(e.target.value, 'changeTitle')} placeholder="Book Title" />
 
-        <select required onChange={(e) => handleChange(e.target.value, 'changeCategory')} name="categories">
-          <option style={{ color: 'darkgrey' }} value="">Category</option>
+        <select className="grey" required onChange={(e) => handleChange(e.target.value, 'changeCategory')} name="categories">
+          <option value="">Category</option>
           {categories.map((item) => {
             idx += 1;
             return (<option value={item} key={idx}>{item}</option>);
           })}
         </select>
-        <button className="main-bg-color" type="submit">ADD BOOK</button>
+        <button className="main-bg-color roboto-font" type="submit">ADD BOOK</button>
       </form>
     </div>
   );

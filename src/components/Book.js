@@ -8,7 +8,7 @@ const Book = (props) => {
     <div className="Book">
       <div className="book-details">
         <p className="category grey">{book.category}</p>
-        <h3 className="title">{book.title}</h3>
+        <h3 className="title roboto-font">{book.title}</h3>
         <p className="author main-text-color">Suzanne Collins</p>
 
         <p className="book-actions main-text-color">
@@ -36,7 +36,7 @@ const Book = (props) => {
       <div className="page-details">
         <small className="grey">CURRENT CHAPTER</small>
         <p>Chapter 17</p>
-        <button className="update-btn main-bg-color" type="button">UPDATE PROGRESS</button>
+        <button className="update-btn main-bg-color roboto-font" type="button">UPDATE PROGRESS</button>
       </div>
     </div>
   );
