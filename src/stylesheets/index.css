@@ -1,6 +1,17 @@
 body {
-  color: #0290ff;
   background-color: rgba(0, 0, 0, 0.05);
   margin: 0;
   padding: 0;
+}
+
+.main-text-color {
+  color: #0290ff;
+}
+
+.main-bg-color {
+  color: #0290ff;
+}
+
+.secondary-text-color {
+  color: #2d2828;
 }

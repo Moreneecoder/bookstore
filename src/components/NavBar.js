@@ -3,14 +3,14 @@ import '../stylesheets/NavBar.css';
 const NavBar = () => (
   <div className="NavBar">
     <div className="menu">
-      <h1 className="menu-item">BookVault</h1>
+      <h1 className="logo main-text-color">BookVault</h1>
 
-      <p className="menu-item">BOOKS</p>
-      <p className="menu-item">CATEGORIES</p>
+      <p className="secondary-text-color">BOOKS</p>
+      <p className="secondary-text-color">CATEGORIES</p>
     </div>
 
     <div className="user-avatar">
-      <p>MA</p>
+      <img className="avatar" src="https://img.icons8.com/ios-glyphs/30/4a90e2/user--v1.png" alt="user" />
     </div>
   </div>
 );

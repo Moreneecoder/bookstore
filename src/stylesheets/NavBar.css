@@ -8,8 +8,6 @@
 .menu {
   flex: 45%;
   display: flex;
-
-  /* background-color: red; */
   justify-content: space-between;
   align-items: center;
   height: 100%;
@@ -17,8 +15,14 @@
 
 .user-avatar {
   display: flex;
-
-  /* background-color: blue; */
   flex: 70%;
   justify-content: flex-end;
+  align-items: center;
+}
+
+.user-avatar .avatar {
+  padding: 0.5em;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+  width: 3%;
 }
