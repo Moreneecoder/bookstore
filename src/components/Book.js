@@ -13,7 +13,14 @@ const Book = (props) => {
 
         <p className="book-actions main-text-color">
           <span>Comment</span>
-          <span>Remove</span>
+          <span
+            role="button"
+            tabIndex={0}
+            onKeyDown={() => handleClick(book)}
+            onClick={() => handleClick(book)}
+          >
+            Remove
+          </span>
           <span>Edit</span>
         </p>
       </div>
@@ -31,8 +38,6 @@ const Book = (props) => {
         <p>Chapter 17</p>
         <button className="update-btn main-bg-color" type="button">UPDATE PROGRESS</button>
       </div>
-
-      <button type="button" onClick={() => handleClick(book)}>Remove</button>
     </div>
 
   // <tr className="Book">
